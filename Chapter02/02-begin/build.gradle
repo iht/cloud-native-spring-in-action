@@ -26,10 +26,12 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 	compileOnly         "com.google.auto.value:auto-value-annotations:${autoValueVersion}"
 	annotationProcessor "com.google.auto.value:auto-value:${autoValueVersion}"
-	implementation "com.google.guava:guava:${guavaVersion}"
 
+	implementation "com.google.guava:guava:${guavaVersion}"
 }
 
 tasks.named('test') {
