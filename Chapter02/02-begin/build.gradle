@@ -12,7 +12,7 @@ version = '0.0.1-SNAPSHOT'
 ext {
 	autoValueVersion = "1.10.4"
 	googleJavaFormat = '1.15.0'
-	guavaVersion = "33.0.0-jre"
+	guavaVersion = "33.1.0-jre"
 }
 
 java {
@@ -32,6 +32,8 @@ dependencies {
 	annotationProcessor "com.google.auto.value:auto-value:${autoValueVersion}"
 
 	implementation "com.google.guava:guava:${guavaVersion}"
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-webflux'
 }
 
 tasks.named('test') {
