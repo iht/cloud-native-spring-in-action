@@ -25,15 +25,15 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-webflux'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	compileOnly         "com.google.auto.value:auto-value-annotations:${autoValueVersion}"
 	annotationProcessor "com.google.auto.value:auto-value:${autoValueVersion}"
 
 	implementation "com.google.guava:guava:${guavaVersion}"
-
-	testImplementation 'org.springframework.boot:spring-boot-starter-webflux'
 }
 
 tasks.named('test') {
